@@ -1,3 +1,5 @@
+package com.company;
+
 import java.util.Scanner;
 
 public class Main {
@@ -14,9 +16,17 @@ public class Main {
     }
 
     public static int getInt(String s) {
-        int res;
-        res = Integer.parseInt(getString(s));
-        return res;
-    }
+        int res = 0;
 
+
+        while (true) {
+            try {
+            res = Integer.parseInt(getString(s));
+            return res;
+
+            } catch (Exception e) {
+                System.out.println("husk ikke tal-ord");
+            }
+        }
+    }
 }
