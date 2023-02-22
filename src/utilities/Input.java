@@ -2,7 +2,7 @@ package utilities;
 
 import java.util.Scanner;
 
-public class input {
+public class Input {
     public static String getString(String s) {
         Scanner scanner = new Scanner(System.in);
         System.out.println(s + " : ");

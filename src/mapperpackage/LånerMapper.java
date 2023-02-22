@@ -58,7 +58,6 @@ public class LånerMapper
 
             String sql = "INSERT  INTO BibliotekOnsdag.Låner (navn, adresse, postnr) VALUES (?,?,?)";
 
-//            PreparedStatement statement = connection.prepareStatement("INSERT  INTO BibliotekOnsdag.Låner (navn, adresse, postnr)" + "VALUES (?,?,?)");
             PreparedStatement statement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
 
             statement.setString(1, låner.getNavn());
