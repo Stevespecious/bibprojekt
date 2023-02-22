@@ -1,19 +1,14 @@
 package com.company;
-
 import database.ConnectionConfiguration;
 import entitet.Låner;
-import utilities.input;
-
-import java.sql.*;
-import java.util.LinkedList;
+import mapperpackage.Facade;
 import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
 
         ConnectionConfiguration.getConnection();
-        List<Låner> lånerList = new LinkedList<>();
-
+        //List<Låner> LånerList = new LinkedList<>();
         //try {
             //Connection connection = ConnectionConfiguration.getConnection();
 
@@ -38,21 +33,22 @@ public class Main {
             //e.printStackTrace();
         //}
 
+        List<Låner> lånerList = Facade.hentLånere();
         for(Låner låner : lånerList) {
             System.out.println(låner.toString());
         }
 
-        while (true) {
-            switch (input.getString("angiv dit ønske?")) {
-                case "lån bog":
-                    System.out.println("du ønsker at låne en bog");
-                    break;
-                case "stop":
-                    break;
-            }
-            if (input.getString("q for quit").equalsIgnoreCase("q")) {
-                break;
-            }
-        }
+        //while (true) {
+            //switch (input.getString("angiv dit ønske?")) {
+                //case "lån bog":
+                    //System.out.println("du ønsker at låne en bog");
+                    //break;
+                //case "stop":
+                    //break;
+            //}
+            //if (input.getString("q for quit").equalsIgnoreCase("q")) {
+                //break;
+            //}
+        //}
     }
 }
