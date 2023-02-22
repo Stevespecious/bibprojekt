@@ -49,7 +49,7 @@ public class LånerMapper
     }
 
 
-    protected    Låner opretLåner(Låner låner) throws SQLException
+    protected Låner opretLåner(Låner låner) throws SQLException
     {
 
 
